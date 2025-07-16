@@ -31,7 +31,6 @@ function App() {
   const [inputTime, setInputTime] = useState(counterInitState);
   const [isRunning, setIsRunning] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
-  // const [wasFinished, setWasFinished] = useState(false);
   const [wasStarted, setWasStarted] = useState(false);
   const timerRef = useRef();
 
@@ -105,7 +104,7 @@ function App() {
             <FinishMsg>Finished</FinishMsg>
           )}
 
-          <div className='btns flex justify-center gap-4 text-lg font-bold tracking-widest'>
+          <div className='btns flex justify-center gap-4 text-lg z-20 relative text-white font-bold tracking-widest'>
             {!isFinished && !isRunning ? (
               <StartBtn
                 isRunning={isRunning}
